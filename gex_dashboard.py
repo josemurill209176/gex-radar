@@ -50,7 +50,7 @@ def compute_gex(calls: pd.DataFrame, puts: pd.DataFrame, spot: float, t_years: f
     return out
 
 
-def find_flip(gex: pd.DataFrame) -> float | None:
+def find_flip(gex: pd.DataFrame):
     """Strike where cumulative net GEX crosses zero (gamma flip)."""
     if gex.empty:
         return None
